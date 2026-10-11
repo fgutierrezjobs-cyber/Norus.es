@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; object-src 'none'; base-uri 'self'" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Norus Analytics — Consultoría de datos y Power BI</title>
+<meta name="description" content="Cuadros de mando en Power BI para ventas, compras y contabilidad, con consultoría de datos a medida. Diagnóstico inicial gratuito." />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="alternate" hreflang="es" href="https://norus.es/" />
+
+<noscript><style>.reveal,.wi{opacity:1!important;transform:none!important}</style></noscript>
+
+<link rel="canonical" href="https://norus.es/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Norus Analytics" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:title" content="Norus Analytics — Consultoría de datos y Power BI" />
+<meta property="og:description" content="Convertimos tus datos en tu próximo paso estratégico. Cuadros de mando en Power BI para ventas, compras y contabilidad, con diagnóstico inicial gratuito." />
+<meta property="og:url" content="https://norus.es/" />
+<meta property="og:image" content="https://norus.es/assets/img/og-cover.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Norus Analytics: convertimos tus datos en tu próximo paso estratégico" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Norus Analytics — Consultoría de datos y Power BI" />
+<meta name="twitter:description" content="Convertimos tus datos en tu próximo paso estratégico. Cuadros de mando en Power BI para ventas, compras y contabilidad, con diagnóstico inicial gratuito." />
+<meta name="twitter:image" content="https://norus.es/assets/img/og-cover.png" />
+
+<meta name="theme-color" content="#080B12" />
+
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png" />
+<link rel="icon" href="assets/img/favicon-64.png" sizes="64x64" type="image/png" />
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png" />
+
+<link rel="preload" href="assets/fonts/inter-4-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="assets/css/norus-web.min.css?v=3bb526b3" />
+<script src="assets/js/norus-motion-pref.js?v=bc20a410"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://norus.es/#org",
+      "name": "Norus Analytics",
+      "legalName": "Next Step Analytics, S.L.",
+      "slogan": "Convertimos tus datos en tu próximo paso estratégico",
+      "url": "https://norus.es/",
+      "logo": "https://norus.es/assets/img/favicon-512.png",
+      "email": "hola@norus.es",
+      "telephone": "+34677200283",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avda. Blas Infante, 1, Edificio Altavista, Planta 3, Oficina 301",
+        "postalCode": "41940",
+        "addressLocality": "Tomares",
+        "addressRegion": "Sevilla",
+        "addressCountry": "ES"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://norus.es/#web",
+      "url": "https://norus.es/",
+      "name": "Norus Analytics",
+      "alternateName": "Norus",
+      "inLanguage": "es-ES",
+      "publisher": { "@id": "https://norus.es/#org" }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://norus.es/#service",
+      "name": "Norus Analytics",
+      "url": "https://norus.es/",
+      "description": "Cuadros de mando en Power BI para ventas, compras y contabilidad, con consultoría de datos, ingeniería de datos y gobernanza del dato.",
+      "serviceType": ["Consultoría de datos", "Cuadros de mando en Power BI", "Business Intelligence", "Ingeniería de datos", "Gobernanza del dato"],
+      "knowsAbout": ["Power BI", "Business Intelligence", "SQL Server", "Excel"],
+      "telephone": "+34677200283",
+      "email": "hola@norus.es",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avda. Blas Infante, 1, Edificio Altavista, Planta 3, Oficina 301",
+        "postalCode": "41940",
+        "addressLocality": "Tomares",
+        "addressRegion": "Sevilla",
+        "addressCountry": "ES"
+      },
+      "areaServed": { "@type": "Country", "name": "España" },
+      "provider": { "@id": "https://norus.es/#org" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<div id="vantaBg" class="vanta-bg"></div>
+<div class="bg-scrim" aria-hidden="true"></div>
+
+<div class="preloader" id="preloader">
+  <div class="preloader-mark">
+    <img src="assets/img/logo-preloader-1100.webp" alt="Norus Analytics"
+         class="preloader-logo" width="660" height="431" fetchpriority="high" />
+  </div>
+  <div class="preloader-bar"><span id="preloaderFill"></span></div>
+</div>
+
+<nav class="navbar" id="navbar" aria-label="Principal">
+  <div class="container nav-inner">
+    <a href="#home" class="brand" aria-label="Norus Analytics">
+      <img src="assets/img/logo-mark-140.webp" alt="Símbolo de Norus Analytics" class="brand-mark" width="38" height="44" />
+      <span class="brand-divider" aria-hidden="true"></span>
+      <img src="assets/img/logo-palabra.svg" alt="Norus Analytics" class="brand-palabra" width="588" height="185" />
+    </a>
+
+    <div class="nav-links">
+      <a href="#solucion" data-nav="solucion">Solución</a>
+      <a href="#proceso" data-nav="proceso">Proceso</a>
+      <a href="#servicios" data-nav="servicios">Servicios</a>
+      <a href="#planificacion" data-nav="planificacion">Planificación</a>
+      <a href="#precios" data-nav="precios">Precios</a>
+      <a href="#contacto" data-nav="contacto">Contacto</a>
+    </div>
+
+    <div class="nav-cta">
+      <a href="#contacto" class="btn btn-primary btn-sm magnetic-btn">Contactar</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"
+              aria-expanded="false" aria-controls="mobileMenu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" data-lenis-prevent>
+      <a href="#solucion">Solución</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#planificacion">Planificación</a>
+      <a href="#precios">Precios</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+  <span class="nav-progress" id="navProgress" aria-hidden="true"></span>
+</nav>
+
+<main id="contenido">
+<header class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-split">
+
+      <div class="hero-copy">
+        <h1 data-split><span class="h1-kicker">Consultoría de datos y cuadros de mando en Power BI</span><span class="sr-only">: </span> Convertimos tus datos en tu <span class="accent">próximo paso</span> estratégico</h1>
+        <p class="lead reveal" style="--rd:0">Cuadros de mando en Power BI para decidir más rápido.</p>
+
+        <div class="hero-cta reveal" style="--rd:1">
+          <a href="#contacto" class="btn btn-primary magnetic-btn">Pide tu diagnóstico gratuito</a>
+          <button type="button" class="btn btn-ghost btn-demo" data-demo-open data-demo-t="0">
+            <svg class="btn-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            Ver la demo · 1 min
+          </button>
+        </div>
+
+        <p class="hero-trust reveal" style="--rd:2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+          Respuesta en menos de 24 h laborables
+        </p>
+      </div>
+
+      <div class="hero-rig" id="heroRig">
+        <div class="rig-stage">
+          <div class="rig-glow" aria-hidden="true"></div>
+
+          <div class="rig-scene">
+            <div class="panel">
+              <span class="panel-face panel-top" aria-hidden="true"></span>
+              <span class="panel-face panel-bottom" aria-hidden="true"></span>
+              <span class="panel-face panel-left" aria-hidden="true"></span>
+              <span class="panel-face panel-right" aria-hidden="true"></span>
+              <span class="panel-back" aria-hidden="true"></span>
+              <span class="panel-hump" aria-hidden="true"></span>
+
+              <div class="panel-front">
+                <div class="monitor-screen">
+                  <video id="heroVideo" class="monitor-video"
+                         src="assets/video/norus-corporativo.mp4?v=1"
+                         poster="assets/img/corporativo-poster.webp"
+                         preload="metadata" autoplay muted loop playsinline></video>
+                  <span class="screen-sheen" aria-hidden="true"></span>
+                  <span class="screen-env" aria-hidden="true"></span>
+                  <span class="screen-vignette" aria-hidden="true"></span>
+                </div>
+                <div class="monitor-chin">
+                  <button class="chin-btn" id="heroVideoToggle" type="button" data-state="playing" aria-label="Pausar la demostración">
+                    <svg class="ico-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+                    <svg class="ico-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                  </button>
+                  <button class="chin-btn" type="button" data-demo-open aria-label="Ver la demostración a pantalla completa">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="stand" aria-hidden="true">
+              <span class="stand-base"><i></i></span>
+              <span class="stand-neck"><i></i></span>
+            </div>
+
+            <span class="rig-table" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <a class="hero-scroll" href="#servicios">
+      <span class="hs-rail" aria-hidden="true"></span>
+      Sigue bajando
+    </a>
+  </div>
+</header>
+
+<dialog class="demo-modal" id="demoModal" aria-labelledby="demoModalTitle">
+  <div class="demo-modal-head">
+    <div>
+      <h2 id="demoModalTitle">Sistema de Inteligencia · demostración con Power BI</h2>
+      <p>Informe comercial, ventas, compras y contable construido por Norus Analytics.</p>
+    </div>
+    <button type="button" class="demo-close" aria-label="Cerrar la demostración">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="demo-chapters" role="group" aria-label="Ir a un informe">
+    <button type="button" data-t="12" aria-pressed="false">Comercial</button>
+    <button type="button" data-t="20" aria-pressed="false">Ventas</button>
+    <button type="button" data-t="28" aria-pressed="false">Compras</button>
+    <button type="button" data-t="36" aria-pressed="false">Contable</button>
+  </div>
+  <video id="demoModalVideo" src="assets/video/norus-corporativo.mp4?v=1" poster="assets/img/corporativo-poster.webp" preload="none" controls playsinline></video>
+</dialog>
+
+<div class="scroll-funnel" aria-hidden="true">
+  <span class="sf-beam"></span>
+  <span class="sf-haze"></span>
+</div>
+
+<section class="ventajas" aria-labelledby="ventajas-t">
+  <div class="container">
+    <h2 class="ventajas-t" id="ventajas-t">Un equipo de datos para tu empresa, sin ampliar plantilla.</h2>
+    <ul class="ventajas-list" data-stagger>
+      <li><span class="v-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span><b>Sin contratar</b><span>Informes y formación sin sumar un puesto a tu plantilla.</span></li>
+      <li><span class="v-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><b>Sin esperar</b><span>Primeros resultados en 6–8 semanas.</span></li>
+      <li><span class="v-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><b>Sin depender de nadie</b><span>Tu equipo aprende a manejarlo (9–11 semanas).</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="solucion" aria-labelledby="solucion-t">
+  <div class="section-glow"><span class="g1"></span><span class="g2"></span></div>
+  <div class="container">
+    <header class="sec-head">
+      <div class="eyebrow">Solución</div>
+      <h2 class="h2" id="solucion-t" data-split>Las preguntas de tu negocio, resueltas con datos.</h2>
+      <div class="sec-side">
+        <p>Plantea una pregunta; elaboramos el informe que la responde.</p>
+      </div>
+    </header>
+
+    <div class="explorer reveal" data-explorer>
+      <div class="explorer-tabs" role="tablist" aria-label="Preguntas y sus informes">
+        <button class="et" role="tab" id="et-comercial" aria-selected="true" aria-controls="shot-comercial" data-t="12">
+          <span class="et-n">Informe comercial</span>
+          <span class="et-q">¿Cuántos presupuestos se convierten en factura, y quién los cierra?</span>
+          <span class="et-d"><span>Realiza un seguimiento de la actividad comercial, las ofertas pendientes y aprobadas, la contribución de nuestros comerciales a las ventas y la detección de posibles demoras en el proceso de venta.</span></span>
+        </button>
+        <button class="et" role="tab" id="et-ventas" aria-selected="false" aria-controls="shot-ventas" tabindex="-1" data-t="20">
+          <span class="et-n">Informe de ventas</span>
+          <span class="et-q">¿Qué artículos y qué clientes me dejan más margen?</span>
+          <span class="et-d"><span>Analiza la rentabilidad de los artículos y detecta cuáles son los que mayor ganancia aportan a la empresa. Permite visualizar tanto el volumen como el peso de cada cliente respecto a las ventas totales.</span></span>
+        </button>
+        <button class="et" role="tab" id="et-compras" aria-selected="false" aria-controls="shot-compras" tabindex="-1" data-t="28">
+          <span class="et-n">Informe de compras</span>
+          <span class="et-q">¿A quién compro, a qué precio y cómo evoluciona?</span>
+          <span class="et-d"><span>Analiza los costes actuales comparándolos con el mes y año anterior, los proveedores con más peso dentro de la empresa y la variación del precio medio de compra.</span></span>
+        </button>
+        <button class="et" role="tab" id="et-contable" aria-selected="false" aria-controls="shot-contable" tabindex="-1" data-t="36">
+          <span class="et-n">Informe contable</span>
+          <span class="et-q">¿Es rentable mi negocio?</span>
+          <span class="et-d"><span>Analizamos el EBITDA para conocer la rentabilidad de la actividad principal de la empresa, teniendo en cuenta los ingresos y los gastos de explotación, antes de considerar intereses, impuestos, depreciaciones y amortizaciones.</span></span>
+        </button>
+      </div>
+
+      <div class="explorer-stage">
+        <div class="shots">
+          <figure class="shot is-active" role="tabpanel" id="shot-comercial" aria-labelledby="et-comercial">
+            <img src="assets/img/informe-comercial.webp?v=2" width="1260" height="708" loading="lazy" decoding="async"
+                 alt="Informe comercial: presupuestos totales, aprobados y pendientes; facturación y conversión por comercial; y evolución de presupuesto frente a factura." />
+          </figure>
+          <figure class="shot" role="tabpanel" id="shot-ventas" aria-labelledby="et-ventas">
+            <img src="assets/img/informe-ventas.webp?v=2" width="1260" height="708" loading="lazy" decoding="async"
+                 alt="Informe de ventas: ventas del año seleccionado, top 10 de artículos con margen, ventas por familia e histórico de importe total de ventas." />
+          </figure>
+          <figure class="shot" role="tabpanel" id="shot-compras" aria-labelledby="et-compras">
+            <img src="assets/img/informe-compras.webp?v=2" width="1260" height="708" loading="lazy" decoding="async"
+                 alt="Informe de compras: precio medio por mes y año, compras por proveedor y artículo, por familia, y evolución del precio de compra." />
+          </figure>
+          <figure class="shot" role="tabpanel" id="shot-contable" aria-labelledby="et-contable">
+            <img src="assets/img/informe-contable.webp?v=2" width="1260" height="708" loading="lazy" decoding="async"
+                 alt="Informe contable: ventas, margen bruto, EBITDA, margen EBITDA y resultado neto, con el desglose de la variación del EBITDA." />
+          </figure>
+        </div>
+        <div class="shot-bar">
+          <p class="shot-note">Demostración con datos ficticios.</p>
+          <button type="button" class="btn btn-ghost shot-open" data-demo-open data-demo-t="12" id="shotOpen">
+            <svg class="btn-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            Ver este informe en vídeo
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="proceso" aria-labelledby="proceso-t">
+  <div class="section-glow"><span class="g1" style="left:60%; top:-10%;"></span><span class="g2" style="left:-10%; right:auto;"></span></div>
+  <div class="container">
+    <header class="sec-head">
+      <div class="eyebrow">Cómo trabajamos</div>
+      <h2 class="h2" id="proceso-t" data-split>Tu próximo paso hacia los datos, en 3 fases</h2>
+    </header>
+
+    <div class="journey" id="journey" data-act="3">
+      <div class="journey-stage" aria-hidden="true">
+        <svg class="jv" viewBox="0 0 520 380" focusable="false">
+          <path class="ln" style="--i:0" pathLength="1" d="M104,72 C180,72 184,112 232,112"/>
+          <path class="ln" style="--i:1" pathLength="1" d="M104,152 C180,152 184,112 232,112"/>
+          <path class="ln" style="--i:2" pathLength="1" d="M104,232 C180,232 184,192 232,192"/>
+          <path class="ln" style="--i:3" pathLength="1" d="M104,312 C180,312 184,272 232,272"/>
+          <path class="ln" style="--i:4" pathLength="1" d="M288,112 C360,112 364,152 416,152"/>
+          <path class="ln" style="--i:5" pathLength="1" d="M288,192 C360,192 364,152 416,152"/>
+          <path class="ln" style="--i:6" pathLength="1" d="M288,192 C360,192 364,232 416,232"/>
+          <path class="ln" style="--i:7" pathLength="1" d="M288,272 C360,272 364,232 416,232"/>
+
+          <line class="base" x1="30" y1="332" x2="490" y2="332"/>
+          <line class="tgt" x1="30" y1="188" x2="490" y2="188"/>
+          <text class="lbl" x="30" y="178">OBJETIVO</text>
+          <rect class="bar" style="--i:0" x="41"  y="260" width="30" height="70"  rx="4"/>
+          <rect class="bar" style="--i:1" x="92"  y="222" width="30" height="108" rx="4"/>
+          <rect class="bar" style="--i:2" x="143" y="238" width="30" height="92"  rx="4"/>
+          <rect class="bar" style="--i:3" x="194" y="184" width="30" height="146" rx="4"/>
+          <rect class="bar" style="--i:4" x="245" y="202" width="30" height="128" rx="4"/>
+          <rect class="bar" style="--i:5" x="296" y="148" width="30" height="182" rx="4"/>
+          <rect class="bar" style="--i:6" x="347" y="170" width="30" height="160" rx="4"/>
+          <rect class="bar peak" style="--i:7" x="398" y="108" width="30" height="222" rx="4"/>
+          <rect class="bar" style="--i:8" x="449" y="130" width="30" height="200" rx="4"/>
+
+          <g class="n" style="--i:0; --x1:78;  --y1:62;  --r1:-11deg; --x2:76;  --y2:72;  --x3:56;  --y3:256">
+            <rect class="nr" x="-28" y="-15" width="56" height="30" rx="8"/><text class="nt t1">Excel</text><text class="nt t2">Ventas</text></g>
+          <g class="n" style="--i:1; --x1:214; --y1:40;  --r1:7deg;   --x2:76;  --y2:152; --x3:107; --y3:218">
+            <rect class="nr" x="-28" y="-15" width="56" height="30" rx="8"/><text class="nt t1">ERP</text><text class="nt t2">Compras</text></g>
+          <g class="n" style="--i:2; --x1:372; --y1:78;  --r1:-5deg;  --x2:76;  --y2:232; --x3:158; --y3:234">
+            <rect class="nr" x="-28" y="-15" width="56" height="30" rx="8"/><text class="nt t1">CSV</text><text class="nt t2">Clientes</text></g>
+          <g class="n" style="--i:3; --x1:452; --y1:44;  --r1:12deg;  --x2:76;  --y2:312; --x3:209; --y3:180">
+            <rect class="nr" x="-28" y="-15" width="56" height="30" rx="8"/><text class="nt t1">PDF</text><text class="nt t2">Contab.</text></g>
+          <g class="n" style="--i:4; --x1:120; --y1:176; --r1:9deg;   --x2:260; --y2:112; --x3:260; --y3:198">
+            <rect class="nr" x="-28" y="-15" width="56" height="30" rx="8"/><text class="nt t1">Correo</text><text class="nt t2">Modelo</text></g>
+          <g class="n" style="--i:5; --x1:300; --y1:150; --r1:-13deg; --x2:260; --y2:192; --x3:311; --y3:144">
+            <rect class="nr" x="-28" y="-15" width="56" height="30" rx="8"/><text class="nt t1">Hoja</text><text class="nt t2">Reglas</text></g>
+          <g class="n" style="--i:6; --x1:446; --y1:214; --r1:5deg;   --x2:260; --y2:272; --x3:362; --y3:166">
+            <rect class="nr" x="-28" y="-15" width="56" height="30" rx="8"/><text class="nt t1">SQL</text><text class="nt t2">Calidad</text></g>
+          <g class="n" style="--i:7; --x1:70;  --y1:316; --r1:-8deg;  --x2:444; --y2:152; --x3:413; --y3:104">
+            <rect class="nr" x="-28" y="-15" width="56" height="30" rx="8"/><text class="nt t1">Facturas</text><text class="nt t2">KPIs</text></g>
+          <g class="n" style="--i:8; --x1:262; --y1:282; --r1:11deg;  --x2:444; --y2:232; --x3:464; --y3:126">
+            <rect class="nr" x="-28" y="-15" width="56" height="30" rx="8"/><text class="nt t1">Notas</text><text class="nt t2">Informe</text></g>
+        </svg>
+        <div class="jv-cap">
+          <span data-cap="1"><b>Datos dispersos.</b> Excel, ERP, correos y PDF.</span>
+          <span data-cap="2"><b>Modelo conectado.</b> Fuentes unificadas con reglas de negocio.</span>
+          <span data-cap="3"><b>Decisión.</b> Un cuadro de mando siempre al día.</span>
+        </div>
+      </div>
+
+      <ol class="journey-steps">
+        <li class="jstep" data-act="1">
+          <h3><span class="jn">1.</span> Diagnóstico y descubrimiento</h3>
+          <p>Auditamos tus datos y objetivos para ver dónde hay más impacto.</p>
+          <span class="j-meta">Entre 1 y 2 semanas</span>
+          <div class="mock-panel">
+            <h4 style="font-size:max(13px, 0.875rem); margin-bottom:1.125rem; color:#F8FAFC;">Diagnóstico inicial</h4>
+            <label class="sr-only" for="diagFuentes">Fuentes de datos actuales</label>
+            <input type="text" class="mock-field" id="diagFuentes" placeholder="Fuentes de datos actuales" autocomplete="off" />
+            <label class="sr-only" for="diagObjetivos">Objetivos de negocio</label>
+            <input type="text" class="mock-field" id="diagObjetivos" placeholder="Objetivos de negocio" autocomplete="off" />
+            <a href="#contacto" class="btn btn-primary btn-block magnetic-btn" style="padding:0.75rem;" id="diagStartBtn">Comenzar análisis</a>
+          </div>
+        </li>
+        <li class="jstep" data-act="2">
+          <h3><span class="jn">2.</span> Diseño y modelado</h3>
+          <p>Modelos, pipelines y dashboards a medida, validados con tu equipo.</p>
+          <span class="j-meta">Validado con tu equipo</span>
+        </li>
+        <li class="jstep" data-act="3">
+          <h3><span class="jn">3.</span> Despliegue y escalado</h3>
+          <p>Producción y seguimiento continuo del impacto en el negocio.</p>
+          <span class="j-meta">Primeros resultados en 6–8 semanas</span>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="servicios">
+  <div class="section-glow"><span class="g1"></span><span class="g2"></span></div>
+  <div class="container">
+    <header class="sec-head">
+      <div class="eyebrow">Servicios</div>
+      <h2 class="h2" data-split>Todo el camino del dato</h2>
+    </header>
+
+    <div class="card-grid" data-stagger data-carousel="Servicios">
+      <div class="card" data-spot>
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="12" r="6.5"/><circle cx="15" cy="12" r="6.5"/></svg>
+        </div>
+        <h3>Planificación</h3>
+        <p>La hoja de ruta que conecta tus datos con tus objetivos.</p>
+      </div>
+      <div class="card" data-spot>
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+        </div>
+        <h3>Diseño</h3>
+        <p>Dashboards claros que cada equipo entiende de un vistazo.</p>
+      </div>
+      <div class="card" data-spot>
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+        </div>
+        <h3>BI &amp; Dashboards</h3>
+        <p>Cuadros de mando con visibilidad total para cada equipo.</p>
+      </div>
+      <div class="card" data-spot>
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c2.5 3 4 7 4 10s-1.5 7-4 10c-2.5-3-4-7-4-10s1.5-7 4-10z"/></svg>
+        </div>
+        <h3>Ingeniería de datos</h3>
+        <p>Pipelines y cloud con datos limpios y gobernados.</p>
+      </div>
+      <div class="card" data-spot>
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Gobernanza y seguridad</h3>
+        <p>Normativa, privacidad y calidad del dato.</p>
+      </div>
+      <div class="card" data-spot>
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+        </div>
+        <h3>Acompañamiento</h3>
+        <p>Formación y mejora continua de cada solución.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight" id="planificacion" aria-labelledby="planificacion-t">
+  <div class="container">
+    <header class="sec-head">
+      <div class="eyebrow">Planificación</div>
+      <h2 class="h2" id="planificacion-t" data-split>Plazos claros, antes de empezar.</h2>
+    </header>
+    <ul class="proof-list" data-stagger>
+      <li class="proof-item">
+        <span class="proof-n"><span class="rng">1<i>–</i>2</span></span>
+        <span class="proof-u">semanas</span>
+        <span class="proof-t">Diagnóstico inicial de tus datos y objetivos.</span>
+      </li>
+      <li class="proof-item">
+        <span class="proof-n"><span class="rng">6<i>–</i>8</span></span>
+        <span class="proof-u">semanas</span>
+        <span class="proof-t">Hasta los primeros resultados: diseño y dashboards.</span>
+      </li>
+      <li class="proof-item">
+        <span class="proof-n"><span class="rng">9<i>–</i>11</span></span>
+        <span class="proof-u">semanas</span>
+        <span class="proof-t">Formación adaptada al equipo para controlar la herramienta.</span>
+      </li>
+      <li class="proof-item">
+        <span class="proof-n">RGPD</span>
+        <span class="proof-u">normativa</span>
+        <span class="proof-t">Cifrado, control de accesos y cumplimiento en cada proyecto.</span>
+      </li>
+    </ul>
+    <p class="proof-foot">Son plazos habituales; el calendario exacto va en la propuesta. <a href="#solucion">Mira la solución funcionando</a>.</p>
+  </div>
+</section>
+
+<section class="section" id="precios">
+  <div class="section-glow"><span class="g1"></span><span class="g2"></span></div>
+  <div class="container">
+    <header class="sec-head">
+      <div class="eyebrow">Precios</div>
+      <h2 class="h2" data-split>Planes de consultoría adaptados a cada etapa</h2>
+    </header>
+
+    <div class="price-compare reveal">
+      <div class="pc-col"><span class="pc-k">Contratar un analista</span><b>Sueldo + cotizaciones</b><span>Y además selección, formación y tiempo hasta que rinde.</span></div>
+      <div class="pc-col pc-us"><span class="pc-k">Con Norus</span><b>Alcance a medida + formación para tu equipo existente</b><span>Sin contratación: eliges lo que necesitas.</span></div>
+    </div>
+
+    <div class="pricing-grid" data-stagger data-carousel="Planes">
+      <div class="price-card" data-spot>
+        <div class="plan-tag">Starter</div>
+        <div class="price-value"><span class="amount">A consultar</span></div>
+        <p class="price-desc">Para empezar a decidir con datos.</p>
+        <ul class="price-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>4 dashboards de BI ya definidos</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Formación e integración con Excel o SQL</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Diseño corporativo incluido</li>
+        </ul>
+        <a href="#contacto" class="btn btn-ghost btn-block">Contactar</a>
+      </div>
+
+      <div class="price-card featured" data-spot>
+        <div class="price-badge">Recomendado</div>
+        <div class="plan-tag">Growth</div>
+        <div class="price-value"><span class="amount">A consultar</span></div>
+        <p class="price-desc">Para escalar tu estrategia de datos.</p>
+        <ul class="price-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Todo lo de Starter</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Adaptación a las necesidades de tu empresa</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Diseño corporativo incluido</li>
+        </ul>
+        <a href="#contacto" class="btn btn-primary btn-block magnetic-btn">Contactar</a>
+      </div>
+
+      <div class="price-card" data-spot>
+        <div class="plan-tag">Enterprise</div>
+        <div class="price-value"><span class="amount">A medida</span></div>
+        <p class="price-desc">Proyectos complejos y transformación a gran escala.</p>
+        <ul class="price-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Dashboards a medida</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Consultor dedicado</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Onboarding e implantación completa</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Diseño corporativo incluido</li>
+        </ul>
+        <a href="#contacto" class="btn btn-ghost btn-block">Contactar</a>
+      </div>
+    </div>
+    <p class="price-note">El alcance y el precio final de cada proyecto se acuerdan en una propuesta comercial específica, tras la sesión de diagnóstico inicial.</p>
+  </div>
+</section>
+
+<section class="section section-tight" id="faq">
+  <div class="container">
+    <header class="sec-head">
+      <div class="eyebrow">Preguntas frecuentes</div>
+      <h2 class="h2" data-split>Resolvemos tus dudas</h2>
+      <div class="sec-side">
+        <p>Lo que suelen preguntarnos antes de empezar. Si no está aquí, escríbenos.</p>
+      </div>
+    </header>
+
+    <div class="faq-list reveal" data-faq>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a0">¿Necesito un analista de datos en plantilla?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="faq-a" id="faq-a0"><p>Depende. Si buscas informes claros y que tu equipo los use, nos encargamos nosotros. Si ya tienes analista, trabajamos con él.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a1">¿Qué tipo de empresas trabajan con Norus Analytics?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="faq-a" id="faq-a1"><p>Pymes y empresas de retail, industria, distribución, logística, obra… cualquier sector que quiera aprovechar sus datos.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a2">¿Cuánto tiempo tarda un proyecto en dar resultados?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="faq-a" id="faq-a2"><p>Diagnóstico inicial: 1–2 semanas. Primeros resultados visibles (diseño, dashboards…): 6–8 semanas.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a3">¿Necesito tener ya infraestructura de datos?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="faq-a" id="faq-a3"><p>No. Podemos partir de cero: diseñamos la arquitectura de datos adecuada a tu tamaño y presupuesto.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a4">¿Cómo garantizáis la seguridad de nuestros datos?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="faq-a" id="faq-a4"><p>Herramientas de Microsoft con cifrado en tránsito y en reposo, control de accesos por usuario (RLS en Power BI) y cumplimiento del RGPD.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contacto">
+  <div class="section-glow"><span class="g1"></span><span class="g2"></span></div>
+  <div class="container contact-grid">
+    <header class="sec-head contact-head">
+      <div class="eyebrow">Contacto</div>
+      <h2 class="h2" data-split>Hablemos de tu próximo proyecto de datos</h2>
+    </header>
+
+      <div class="contact-steps reveal">
+        <ol class="next-steps">
+          <li><b>Nos cuentas tu reto</b>Dos minutos, sin documentación previa.</li>
+          <li><b>Te respondemos</b>Una persona, no un formulario automático.</li>
+          <li><b>Sesión de diagnóstico gratuita</b>Si encaja, propuesta comercial a medida.</li>
+        </ol>
+      </div>
+
+      <div class="contact-main reveal" style="--rd:1">
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/xzedeekk" method="POST">
+        <div class="row2">
+          <div><label for="f-nombre">Nombre<span class="req" aria-hidden="true">*</span></label><input type="text" id="f-nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required /></div>
+          <div><label for="f-empresa">Empresa</label><input type="text" id="f-empresa" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization" /></div>
+        </div>
+        <div class="row2">
+          <div><label for="f-email">Email<span class="req" aria-hidden="true">*</span></label><input type="email" id="f-email" name="email" placeholder="tu@empresa.com" autocomplete="email" required /></div>
+          <div><label for="f-tamano">Tamaño de la empresa</label>
+            <select id="f-tamano" name="tamano_empresa">
+              <option>1-10 empleados</option>
+              <option>11-50 empleados</option>
+              <option>51-250 empleados</option>
+              <option>Más de 250 empleados</option>
+            </select>
+          </div>
+        </div>
+        <fieldset class="topics">
+          <legend>¿Qué quieres entender primero? <span style="color:var(--text-dimmer)">(opcional)</span></legend>
+          <div class="topic-row">
+            <label class="topic"><input type="checkbox" name="interes" value="Comercial" /><span>Comercial</span></label>
+            <label class="topic"><input type="checkbox" name="interes" value="Ventas" /><span>Ventas</span></label>
+            <label class="topic"><input type="checkbox" name="interes" value="Compras" /><span>Compras</span></label>
+            <label class="topic"><input type="checkbox" name="interes" value="Contabilidad" /><span>Contabilidad</span></label>
+            <label class="topic"><input type="checkbox" name="interes" value="No lo sé todavía" /><span>No lo sé todavía</span></label>
+          </div>
+        </fieldset>
+        <div><label for="f-mensaje">Cuéntanos tu proyecto</label><textarea id="f-mensaje" name="mensaje" placeholder="¿Qué reto de datos quieres resolver?"></textarea></div>
+        <label class="consent-row">
+          <input type="checkbox" name="consentimiento" required />
+          <span>He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener">Política de Privacidad</a>.</span>
+        </label>
+        <p class="form-note">Responsable: Next Step Analytics, S.L. (Norus Analytics). Finalidad: atender tu solicitud. Legitimación: tu consentimiento. Destinatarios: proveedores de formulario y de correo, como encargados del tratamiento. Derechos: acceso, rectificación, supresión y otros, en la <a href="privacidad.html" target="_blank" rel="noopener">Política de Privacidad</a>.</p>
+        <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <input type="hidden" name="_subject" value="Nueva solicitud — Norus Analytics" />
+        <button class="btn btn-primary btn-block magnetic-btn" type="submit"><span class="spin" aria-hidden="true"></span><span class="lbl">Enviar solicitud</span></button>
+        <p class="form-note" id="formStatus" role="status" aria-live="polite">Te responderemos en menos de 24h laborables.</p>
+      </form>
+    </div>
+
+      <div class="contact-info reveal">
+        <div class="info-row">
+          <div class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><path d="M2 6h20v12H2z"/></svg></div>
+          <div><h3>Email</h3><p><a href="mailto:hola@norus.es">hola@norus.es</a></p></div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.78.6 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.17a2 2 0 0 1 2.11-.45c.85.28 1.73.48 2.63.6A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><h3>Teléfono</h3><p><a href="tel:+34677200283">+34 677 20 02 83</a></p></div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h3>Domicilio fiscal</h3><p>Avda. Blas Infante, 1 · Edificio Altavista<br />Planta 3 – Oficina 301<br />41940 Tomares (Sevilla)</p></div>
+        </div>
+      </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand" aria-label="Norus Analytics">
+          <img src="assets/img/logo-mark-140.webp" alt="Símbolo de Norus Analytics" class="brand-mark" width="38" height="44" loading="lazy" />
+          <span class="brand-divider" aria-hidden="true"></span>
+          <img src="assets/img/logo-palabra.svg" alt="Norus Analytics" class="brand-palabra" width="588" height="185" />
+        </a>
+        <p>Consultoría de datos y analítica avanzada para llevar tu negocio al siguiente nivel.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href="#servicios">Planificación</a>
+        <a href="#servicios">Diseño</a>
+        <a href="#servicios">BI &amp; Dashboards</a>
+        <a href="#servicios">Ingeniería de datos</a>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <a href="#solucion">Solución</a>
+        <a href="#proceso">Cómo trabajamos</a>
+        <a href="#precios">Precios</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Privacidad</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Norus Analytics (Next Step Analytics, S.L.). Todos los derechos reservados.</span>
+      <div class="links">
+        <a href="privacidad.html">Privacidad</a>
+        <a href="terminos.html">Términos</a>
+        <button type="button" class="motion-toggle" id="motionToggle" aria-pressed="false">Pausar animaciones</button>
+      </div>
+    </div>
+  </div>
+  <img src="assets/img/logo-palabra.svg" alt="Norus Analytics" class="footer-mark" aria-hidden="true" loading="lazy" width="588" height="185" />
+</footer>
+
+
+<button class="back-top" id="backTop" aria-label="Volver arriba">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/main.js?v=ef0ec2a7"></script>
+<script src="assets/js/norus-preloader-fx.js?v=1f56b203"></script>
+<script src="assets/js/norus-scroll.js?v=d294c13d"></script>
+<script src="assets/js/norus-hero.js?v=d7938dc3"></script>
+<script src="assets/js/norus-producto.js?v=9be25508"></script>
+<script src="assets/js/norus-journey.js?v=d21a9264"></script>
+<script src="assets/js/norus-carousel.js?v=f6efd981"></script>
+<script src="assets/js/norus-orden.js?v=0c14dfc0"></script>
+<script src="assets/js/norus-form.js?v=2efcac7d"></script>
+<script src="assets/js/norus-proceso.js?v=09abb323"></script>
+</body>
+</html>

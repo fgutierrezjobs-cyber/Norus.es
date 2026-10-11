@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Mapa del sitio — Norus Analytics
+
+  Lista de las páginas que queremos que Google indexe. Solo aparece la
+  portada: las cuatro páginas legales llevan `<meta name="robots"
+  content="noindex, follow">` a propósito (son documentos de consulta,
+  no contenido que deba salir en búsquedas), y una página con `noindex`
+  dentro de un sitemap es una contradicción que Search Console marca
+  como error.
+
+  ⚠️ AL CONTRATAR EL DOMINIO: sustituir `norus.es` por el
+  dominio real, aquí y en robots.txt e index.html.
+
+  `lastmod` conviene actualizarlo cuando se cambie el contenido de la
+  portada de forma significativa. No pasa nada si se olvida: Google lo
+  usa como pista, no como verdad absoluta.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://norus.es/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

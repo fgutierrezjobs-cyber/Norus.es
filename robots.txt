@@ -1,0 +1,19 @@
+# robots.txt — Norus Analytics
+#
+# Le dice a los buscadores qué pueden rastrear. Sin este archivo Google
+# indexa igual, pero con él se evita que pierda tiempo en carpetas que
+# no aportan nada y se le señala dónde está el mapa del sitio.
+#
+# ⚠️ AL CONTRATAR EL DOMINIO: sustituir `norus.es` de la
+# línea `Sitemap` por el dominio real. Es la única línea de este archivo
+# que lleva una dirección absoluta.
+
+# NO se bloquea /assets/ a propósito. Google necesita poder descargar el
+# CSS y el JavaScript para ver la página como la ve una persona; si se le
+# cierra esa carpeta, la renderiza rota y la valora peor. También necesita
+# llegar a la imagen de previsualización para la tarjeta al compartir.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://norus.es/sitemap.xml
