@@ -1,0 +1,1 @@
+if(window.THREE&&THREE.ColorManagement)THREE.ColorManagement.enabled=false;

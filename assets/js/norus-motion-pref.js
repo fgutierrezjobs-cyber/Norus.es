@@ -1,0 +1,3 @@
+(function(){"use strict";var off=false;try{off=new URLSearchParams(window.location.search).get("animaciones")==="off";}catch(e){}
+window.__norusMotionOff=off;if(!off)return;document.documentElement.classList.add("motion-off");var original=window.matchMedia&&window.matchMedia.bind(window);if(!original)return;window.matchMedia=function(query){if(/prefers-reduced-motion:\s*reduce/.test(query)){return{matches:true,media:query,onchange:null,addEventListener:function(){},removeEventListener:function(){},addListener:function(){},removeListener:function(){},dispatchEvent:function(){return false;}};}
+return original(query);};})();
